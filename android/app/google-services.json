@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "950880532520",
+    "project_id": "sosal-midia",
+    "storage_bucket": "sosal-midia.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950880532520:android:9feb74ef9d32c820191d1d",
+        "android_client_info": {
+          "package_name": "com.example.instagram_clone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "950880532520-ngoup5ggjjr3a0ru4fgeiptjcds8lrp7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD76S1bDvemzn6DLi82djdVSkGCd8Tr8og"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "950880532520-683be9hc1oltburkgn0d5fbqab68hn0e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
