@@ -20,7 +20,8 @@ class AuthState {
         isLoading = false,
         userId = null;
 
-  AuthState copiedWithIsLoading(bool isLoading) => AuthState.unknown();
+  AuthState copiedWithIsLoading(bool isLoading) =>
+      AuthState(result: result, isLoading: isLoading, userId: userId);
 
   @override
   bool operator ==(covariant AuthState other) =>
