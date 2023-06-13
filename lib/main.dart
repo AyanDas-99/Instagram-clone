@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter/services.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:instagram_clone/state/auth/backend/authenticator.dart';
 import 'package:instagram_clone/state/auth/providers/auth_state_provider.dart';
 import 'package:instagram_clone/state/auth/providers/is_logged_in_provider.dart';
+import 'package:instagram_clone/views/components/loading/loading_screen.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -52,7 +51,7 @@ class Home extends StatelessWidget {
         title: const Text('This is the title'),
       ),
       body: Consumer(
-          builder: (context, ref, child) => TextButton(
+          builder: (buildcontext, ref, child) => TextButton(
               onPressed: () {
                 ref.read(authStateProvider.notifier).logOut();
               },
