@@ -4,8 +4,16 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:instagram_clone/state/auth/providers/auth_state_provider.dart';
 import 'package:instagram_clone/state/auth/providers/is_logged_in_provider.dart';
 import 'package:instagram_clone/state/providers/is_loading_provider.dart';
+import 'package:instagram_clone/views/components/animations/data_not_found_animation_view.dart';
+import 'package:instagram_clone/views/components/animations/empty_content_with_text_animation_view.dart';
+import 'package:instagram_clone/views/components/animations/empty_contents_animation_view.dart';
+import 'package:instagram_clone/views/components/animations/error_animation_view.dart';
+import 'package:instagram_clone/views/components/animations/loading_animation_view.dart';
+import 'package:instagram_clone/views/components/animations/lottie_animation_view.dart';
+import 'package:instagram_clone/views/components/animations/small_error_animation_view.dart';
 import 'package:instagram_clone/views/components/loading/loading_screen.dart';
 import 'firebase_options.dart';
+import 'views/login/login_view.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -56,44 +64,17 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('This is the title'),
-      ),
-      body: Consumer(
-          builder: (buildcontext, ref, child) => TextButton(
-              onPressed: () {
-                ref.read(authStateProvider.notifier).logOut();
-              },
-              child: const Text('Log out'))),
-    );
-  }
-}
-
-class LoginView extends StatelessWidget {
-  const LoginView({super.key});
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Log In'),
-      ),
-      body: Consumer(builder: (context, ref, child) {
-        return Column(
-          children: [
-            TextButton(
-                onPressed: () async {
-                  await ref.read(authStateProvider.notifier).logInWithGoogle();
-                },
-                child: const Text('Sign in with google')),
-            TextButton(
-                onPressed: () async {
-                  await ref.read(authStateProvider.notifier).logOut();
-                },
-                child: const Text('Log out')),
-          ],
-        );
-      }),
-    );
+    return const DataNotFoundAnimationView();
+    // return Scaffold(
+    //   appBar: AppBar(
+    //     title: const Text('This is the title'),
+    //   ),
+    //   body: Consumer(
+    //       builder: (buildcontext, ref, child) => TextButton(
+    //           onPressed: () {
+    //             ref.read(authStateProvider.notifier).logOut();
+    //           },
+    //           child: const Text('Log out'))),
+    // );
   }
 }

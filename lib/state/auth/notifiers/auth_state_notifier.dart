@@ -15,7 +15,6 @@ class AuthStateNotifer extends StateNotifier<AuthState> {
           isLoading: false,
           userId: _authenticator.userId);
     }
-    ;
   }
 
   Future<void> logOut() async {

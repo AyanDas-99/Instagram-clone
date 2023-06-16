@@ -9,7 +9,7 @@ class AuthState {
   final bool isLoading;
   final UserId? userId;
 
-  AuthState({
+  const AuthState({
     required this.result,
     required this.isLoading,
     required this.userId,
