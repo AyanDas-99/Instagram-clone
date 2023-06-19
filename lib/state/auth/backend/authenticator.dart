@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:instagram_clone/state/auth/constants/constants.dart';
 import 'package:instagram_clone/state/auth/models/auth_results.dart';
-import 'package:instagram_clone/state/auth/posts/typedef/user_id.dart';
+import 'package:instagram_clone/state/posts/typedef/user_id.dart';
 
 class Authenticator {
   const Authenticator();

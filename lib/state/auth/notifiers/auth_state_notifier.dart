@@ -2,7 +2,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:instagram_clone/state/auth/backend/authenticator.dart';
 import 'package:instagram_clone/state/auth/models/auth_results.dart';
 import 'package:instagram_clone/state/auth/models/auth_state.dart';
-import 'package:instagram_clone/state/auth/posts/typedef/user_id.dart';
+import 'package:instagram_clone/state/posts/typedef/user_id.dart';
 import 'package:instagram_clone/state/user_info/backend/user_info_storage.dart';
 
 class AuthStateNotifer extends StateNotifier<AuthState> {

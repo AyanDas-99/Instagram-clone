@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart' show immutable;
-import 'package:instagram_clone/state/auth/posts/typedef/user_id.dart';
+import 'package:instagram_clone/state/posts/typedef/user_id.dart';
 import 'package:instagram_clone/state/constants/firebase_collection_names.dart';
 import 'package:instagram_clone/state/constants/firebase_field_names.dart';
 import 'package:instagram_clone/state/user_info/models/user_info_payload.dart';
