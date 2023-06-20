@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:instagram_clone/state/auth/providers/auth_state_provider.dart';
 import 'package:instagram_clone/state/auth/providers/is_logged_in_provider.dart';
 import 'package:instagram_clone/state/providers/is_loading_provider.dart';
 import 'package:instagram_clone/views/components/loading/loading_screen.dart';
@@ -49,25 +48,6 @@ class MyApp extends StatelessWidget {
           return const LoginView();
         },
       ),
-    );
-  }
-}
-
-class Home extends StatelessWidget {
-  const Home({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('This is the title'),
-      ),
-      body: Consumer(
-          builder: (buildcontext, ref, child) => TextButton(
-              onPressed: () {
-                ref.read(authStateProvider.notifier).logOut();
-              },
-              child: const Text('Log out'))),
     );
   }
 }

@@ -5,6 +5,7 @@ import 'package:instagram_clone/state/auth/providers/auth_state_provider.dart';
 import 'package:instagram_clone/views/components/dialogs/alert_dialog_model.dart';
 import 'package:instagram_clone/views/components/dialogs/logout_dialog.dart';
 import 'package:instagram_clone/views/constants/strings.dart';
+import 'package:instagram_clone/views/tabs/users_posts/user_posts_view.dart';
 
 class MainView extends StatefulHookConsumerWidget {
   const MainView({super.key});
@@ -32,7 +33,7 @@ class _MainViewState extends ConsumerState<MainView> {
             ),
             IconButton(
               onPressed: () async {
-                final shouldLogout = await LogoutDialog()
+                final shouldLogout = await const LogoutDialog()
                     .present(context)
                     .then((value) => value ?? false);
                 print(shouldLogout);
@@ -43,7 +44,23 @@ class _MainViewState extends ConsumerState<MainView> {
               icon: const Icon(Icons.logout),
             ),
           ],
+          bottom: const TabBar(tabs: [
+            Tab(
+              icon: Icon(Icons.person),
+            ),
+            Tab(
+              icon: Icon(Icons.search),
+            ),
+            Tab(
+              icon: Icon(Icons.home),
+            ),
+          ]),
         ),
+        body: const TabBarView(children: [
+          UserPostsView(),
+          UserPostsView(),
+          UserPostsView(),
+        ]),
       ),
     );
   }
