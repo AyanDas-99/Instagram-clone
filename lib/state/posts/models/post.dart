@@ -19,8 +19,10 @@ class Post {
   final String originalFileStorageId;
   final Map<PostSetting, bool> postSettings;
 
-  Post({required this.postId, required Map<String, dynamic> json})
-      : userId = json[PostKey.userId],
+  Post({
+    required this.postId,
+    required Map<String, dynamic> json,
+  })  : userId = json[PostKey.userId],
         message = json[PostKey.message],
         createdAt = (json[PostKey.createdAt] as Timestamp).toDate(),
         thumbnailUrl = json[PostKey.thumbnailUrl],
@@ -31,7 +33,7 @@ class Post {
         fileName = json[PostKey.fileName],
         aspectRatio = json[PostKey.aspectRatio],
         thumbnailStorageId = json[PostKey.thumbnailStorageId],
-        originalFileStorageId = json[PostKey.originalFileStorageid],
+        originalFileStorageId = json[PostKey.originalFileStorageId],
         postSettings = {
           for (final entry in json[PostKey.postSettings].entries)
             PostSetting.values
