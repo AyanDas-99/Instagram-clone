@@ -64,6 +64,9 @@ class _CreateNewPostViewState extends ConsumerState<CreateNewPostView> {
                               message: message,
                               postSettings: postSettings,
                               userId: userId);
+                      if (isUploaded && mounted) {
+                        Navigator.of(context).pop();
+                      }
                     }
                   : null,
               icon: const Icon(Icons.send))
